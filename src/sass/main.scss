@@ -1,6 +1,5 @@
-/*
- * Все паршалы импортировать в этот файл
- */
-
-@import 'normalize.scss';
-@import 'base.scss';
+@import 'variables';
+@import 'normalize';
+@import 'reset';
+@import '../../node_modules/bootstrap-4-grid/scss/grid';
+@import 'base';
