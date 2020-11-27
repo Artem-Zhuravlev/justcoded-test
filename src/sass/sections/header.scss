@@ -1,0 +1,78 @@
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	&-logo{
+		position: relative;
+		font-family: 'Arvo', serif;
+		font-weight: 400;
+		text-decoration: none;
+		font-size: 40px;
+		color: $mainColor;
+		&::before{
+			position: absolute;
+			bottom: 0;
+			left: 7px;
+			content: "";
+			width: 14px;
+			height: 4px;
+			background-color: $mainColor;
+		}
+	}
+
+	&-nav{
+		&-list{
+			position: absolute;
+			display: none;
+		}
+
+		&-btn{
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			width: 48px;
+			height: 32px;
+			cursor: url(../images/cursor.png) -4 0, auto;
+			border: none;
+			background-color: transparent;
+			&:focus{
+				outline: transparent;
+			}
+
+			.line{
+				width: 36px;
+				height: 6px;
+				background-color: $mainColor;
+				border-radius: 2px;
+				transition: .4s;
+				&:nth-child(2){
+					margin-top: 6px;
+					margin-bottom: 6px;
+				}
+			}
+			&.active{
+				.line{
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+					transform-origin: 50% 50%;
+					&:first-child{
+						transform: rotate(45deg);
+					}
+					&:last-child{
+						transform: rotate(-45deg);
+					}
+					&:nth-child(2){
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+.cart{
+    width: 353px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 4px $grayBorder;
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: inherit;
+	transition: .3s;
+	overflow: hidden;
+
+
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #3e3e3e;
+		opacity: 0;
+		transition: .7s ease;
+	}
+	&:hover{
+		&::before{
+			opacity: .38;
+		}
+
+		.cart-desc{
+			bottom: 0;
+		}
+		.cart-controlls{
+			opacity: 1;
+		}
+	}
+
+	&-pic{
+		img{
+    		width: 100%;
+    	}
+	}
+
+    &-desc{
+    	position: absolute;
+    	bottom: -100%;
+    	left: 0;
+    	right: 0;
+    	
+    	background-color: $gray;
+    	overflow: hidden;
+    	padding: 20px 22px 27px;
+    	transition: .3s ease;
+    	z-index: 1;
+    	h4{
+    		font-size: 18px;
+    	}
+    }
+    &-controlls{
+    	position: absolute;
+    	top: 0;
+    	bottom: 93px;
+    	left: 0;
+    	right: 0;
+    	margin: auto;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	height: calc(100% - 93px);
+    	font-size: 0;
+    	z-index: 2;
+    	opacity: 0;
+    	transition: .7s ease;
+
+    }
+    &-view{
+    	width: 56px;
+    	height: 56px;
+    	background: url(../images/eye.png)no-repeat center;
+    }
+    &-favourite{
+    	width: 56px;
+    	height: 56px;
+    	border: none;
+    	background: url(../images/hearts.png)no-repeat center;
+    	cursor: pointer;
+    	&:focus{
+    		outline: transparent;
+    	}
+    }
+
+
+}
