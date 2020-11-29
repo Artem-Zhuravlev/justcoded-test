@@ -50,6 +50,7 @@
     "usedcss": "^1.0.7"
   },
   "dependencies": {
-    "bootstrap-4-grid": "^3.4.0"
+    "bootstrap-4-grid": "^3.4.0",
+    "ragrid": "^1.0.6"
   }
 }

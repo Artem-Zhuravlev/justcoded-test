@@ -1,6 +1,6 @@
 .header{
 	position: absolute;
-	top: 0;
+	top: 16px;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -14,7 +14,7 @@
 		color: $mainColor;
 		&::before{
 			position: absolute;
-			bottom: 0;
+			bottom: 6px;
 			left: 7px;
 			content: "";
 			width: 14px;
@@ -24,13 +24,42 @@
 	}
 
 	&-nav{
+		position: relative;
 		&-list{
-			position: absolute;
-			display: none;
+			position: fixed;
+			top: 0;
+			bottom: auto;
+			overflow: hidden;
+			left: 0;
+			height: 0;
+			right: 0;
+			margin: auto;
+			background-color: $mainColor;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			transition: .4s;
+			li{
+				margin-bottom: 20px;
+			}
+			a{
+				color: $lightGray;
+				text-decoration: none;
+				font-size: 50px;
+			}
+			&.active{
+				bottom: 0;
+				overflow: auto;
+				height: auto;
+			}
 		}
 
 		&-btn{
 			position: relative;
+			top: -7px;
+			right: -5px;
 			display: flex;
 			flex-direction: column;
 			width: 48px;
@@ -38,6 +67,7 @@
 			cursor: url(../images/cursor.png) -4 0, auto;
 			border: none;
 			background-color: transparent;
+			z-index: 4;
 			&:focus{
 				outline: transparent;
 			}
@@ -62,6 +92,7 @@
 					right: 0;
 					margin: auto;
 					transform-origin: 50% 50%;
+					background-color: $lightGray;
 					&:first-child{
 						transform: rotate(45deg);
 					}

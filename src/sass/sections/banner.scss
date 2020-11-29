@@ -1,9 +1,22 @@
 .banner{
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+	padding-top: 239px;
+	padding-bottom: 151px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	h2{
+		margin-bottom: 26px;
+		font-size: 35px;
+		font-weight: 400;
+	}
+	.title-section{
+		margin-bottom: 52px;
+	}
+	.btns-section{
+		a{
+			margin: 0 13px;
+		}
+	}
 }
