@@ -15,41 +15,56 @@
 	a{
 		text-decoration: none;
 		color: inherit;
-	}
-
-	&-logo{
-		position: relative;
-		&::before{
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 5px;
-			height: 1px;
-			background-color: $mainColor;
+		transition: .4s color;
+		&:hover,
+		&:focus{
+			color: darken($accentColor, 10%);
 		}
 	}
 
-	&-col{
+	&__logo{
+		a{
+			position: relative;
+			&::before{
+			content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 14px;
+				height: 2px;
+				background-color: $mainColor;
+				transition: .4s background-color;
+			}
+			&:hover,
+			&:focus{
+				&::before{
+					background-color: darken($accentColor, 10%);
+				}
+			}
+		}
+		
+	}
+
+	&__col{
 		h4{
 			margin-bottom: 44px;
 		}
 	}
 
-	&-list{
+	&__list{
 		letter-spacing: .1px;
 		li{
 			margin-bottom: 9px;
 		}
 	}
-	&-blog-list{
+	&__blog-list{
 		line-height: 1.34;
 		letter-spacing: .1px;
 		li{
 			margin-bottom: 19px;
 		}
 	}
-	&-form{
+	&__form{
 		margin-top: 31px;
 	}
 }

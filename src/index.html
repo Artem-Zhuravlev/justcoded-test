@@ -18,20 +18,18 @@
 
   <body>
     <header class="header">
-      <div class="container d-flex justify-content-lg-between align-items-lg-center">
+      <div class="container d-flex justify-content-between align-items-center">
         <a href="#" class="header-logo">
           Vilas
         </a>
 
-        <div class="cursor"></div>
-
         <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li><a href="#">Want Perfact Output?</a></li>
-            <li><a href="#">Amenities</a></li>
-            <li><a href="#">Projects</a></li>
+          <ul class="header-nav__list">
+            <li><a href="#banner">Want Perfact Output?</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#projects">Projects</a></li>
           </ul>
-          <button class="header-nav-btn" aria-label="Burger button">
+          <button class="header-nav__btn" aria-label="Burger button">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -41,16 +39,16 @@
     </header>
 
     <!-- begin banner -->
-    <div class="banner" style="background-image: url(images/banner-bg.jpg)">
+    <div class="banner" style="background-image: url(images/banner-bg.jpg)" id="banner">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 offset-lg-3 text-center">
-            <div class="title-section">
+            <div class="banner__title-section">
               <h1>Want Perfact Output?</h1>
               <h2>Let’s join with us :)</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur neque quis imperdiet semper. Proin quis ex e</p>
             </div>
-            <div class="btns-section">
+            <div class="banner__btns-section">
               <a href="#" class="btn">Design</a>
               <a href="#" class="btn">Developing</a>
             </div>
@@ -62,30 +60,31 @@
 
     <main class="main">
       <!-- begin about -->
-      <section class="about">
+      <section class="about" id="amenities">
         <div class="container">
           <h2>About us</h2>
           <div class="row d-flex ">
             <div class="col-lg-6">
               <aside class="about-sidebar">
                 <p><strong>Vilas is</strong>ipsum dolor sit amet, consectetur adipiscing ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur neque quis imperdiet semper. Proin quis ex et felis imperdiet lacinia. Nulla ultrices justo eu enim rhoncus, faucibus dapibus arcu gravida. In vehicula sagittis diam non maximus. Cras sit amet suscipit turpis. Curabitur rutrum et odio a maximus. </p> 
+              </aside>
             </div>
             <div class="col-lg-6">
               <div class="about-slider">
                 <div>
-                  <div class="about-slider-item">
+                  <div class="about-slider__item">
                     <h3>Professional PSD Template Design</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur neque quis imperdiet semper. Proin quis ex et felis imperdiet lacinia. Nulla ultrices justo eu enim rhoncus, faucibus dapibus arcu gravida. In vehicula sagittis diam non maximus. Cras sit amet suscipit turpis. Curabitur rutrum et odio a maximus. Integer congue a magna non egestas. Etiam a neque et quam vulputate ullamcorper vel eu metus. Donec </p>
                   </div>
                 </div>
                 <div>
-                  <div class="about-slider-item">
+                  <div class="about-slider__item">
                     <h3>Professional PSD Template Design 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur neque quis imperdiet semper. Proin quis ex et felis imperdiet lacinia. Nulla ultrices justo eu enim rhoncus, faucibus dapibus arcu gravida. In vehicula sagittis diam non maximus. Cras sit amet suscipit turpis. Curabitur rutrum et odio a maximus. Integer congue a magna non egestas. Etiam a neque et quam vulputate ullamcorper vel eu metus. Donec </p>
                   </div>
                 </div>
                 <div>
-                  <div class="about-slider-item">
+                  <div class="about-slider__item">
                     <h3>Professional PSD Template Design 3</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur neque quis imperdiet semper. Proin quis ex et felis imperdiet lacinia. Nulla ultrices justo eu enim rhoncus, faucibus dapibus arcu gravida. In vehicula sagittis diam non maximus. Cras sit amet suscipit turpis. Curabitur rutrum et odio a maximus. Integer congue a magna non egestas. Etiam a neque et quam vulputate ullamcorper vel eu metus. Donec </p>
                   </div>
@@ -98,104 +97,104 @@
       <!-- end about -->
 
       <!-- begin projects -->
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="container">
-          <div class="text-center title-section">
+          <div class="text-center projects__title-section">
             <h2>Latest Published Projects.</h2>
           </div>
-          <div class="projects-row" >
-            <article class="cart">
-              <main class="cart-pic">
+          <div class="projects__row" >
+            <article class="projects__cart cart" tabindex="-1">
+              <div class="cart-pic">
                 <div class="cart-controlls">
                   <a href="#" class="cart-view">Show more</a>
                   <button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/project-pic.jpg" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>Food menu Flyer Template</h4>
                 <p><em>Graphic Design</em></p>
               </footer>
             </article>
 
-            <article class="cart">
-              <main class="cart-pic">
+            <article class="projects__cart cart" tabindex="-1">
+              <div class="cart-pic">
                 <div class="cart-controlls">
                   <a href="#" class="cart-view">Show more</a>
                   <button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/project-pic2.jpg" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>Food menu Flyer Template</h4>
                 <p><em>Graphic Design</em></p>
               </footer>
             </article>
 
-            <article class="cart">
-              <main class="cart-pic">
+            <article class="projects__cart cart" tabindex="-1">
+              <div class="cart-pic">
                 <div class="cart-controlls">
                   <a href="#" class="cart-view">Show more</a>
                   <button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/project-pic3.jpg" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>Food menu Flyer Template</h4>
                 <p><em>Graphic Design</em></p>
               </footer>
             </article>
 
-            <article class="cart">
-              <main class="cart-pic">
+            <article class="projects__cart cart" tabindex="-1">
+              <div class="cart-pic">
                 <div class="cart-controlls">
                   <a href="#" class="cart-view">Show more</a>
                   <button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/project-pic4.jpg" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>Food menu Flyer Template</h4>
                 <p><em>Graphic Design</em></p>
               </footer>
             </article>
 
-            <article class="cart">
-              <main class="cart-pic">
+            <article class="projects__cart cart" tabindex="-1">
+              <div class="cart-pic">
                 <div class="cart-controlls">
                   <a href="#" class="cart-view">Show more</a>
                   <button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/project-pic5.jpg" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>Food menu Flyer Template</h4>
                 <p><em>Graphic Design</em></p>
               </footer>
             </article>
 
-            <article class="cart">
-              <main class="cart-pic">
+            <article class="projects__cart cart" tabindex="-1">
+              <div class="cart-pic">
                 <div class="cart-controlls">
                   <a href="#" class="cart-view">Show more</a>
                   <button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/project-pic6.jpg" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>Food menu Flyer Template</h4>
                 <p><em>Graphic Design</em></p>
               </footer>
             </article>
 
-            <article class="cart">
-              <main class="cart-pic">
+            <article class="projects__cart cart" tabindex="-1">
+              <div class="cart-pic">
                 <div class="cart-controlls">
                   <a href="#" class="cart-view">Show more</a>
                   <button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/project-pic7.jpg" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>Food menu Flyer Template</h4>
                 <p><em>Graphic Design</em></p>
@@ -203,7 +202,7 @@
             </article>
            
           </div>
-          <div class="btn-section text-center">
+          <div class="projects__btn-section text-center">
             <button class="btn more">See All</button>
           </div>
         </div>
@@ -213,10 +212,10 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
-            <div class="footer-col">
-              <h4 class="footer-logo"><a href="#">Vilas</a></h4>
-              <ul class="footer-list">
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer__col">
+              <h4 class="footer__logo"><a href="#">Vilas</a></h4>
+              <ul class="footer__list">
                 <li><a href="#">Terms & Condition</a></li>
                 <li><a href="#">Contact us</a></li>
                 <li><a href="#">Support Desk</a></li>
@@ -224,10 +223,10 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="footer-col">
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer__col">
               <h4><a href="#">Useful Links</a></h4>
-              <ul class="footer-list">
+              <ul class="footer__list">
                 <li><a href="#">Common FAQs</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Site Map</a></li>
@@ -235,20 +234,20 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="footer-col">
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer__col">
               <h4><a href="#">Recent Blog</a></h4>
-              <ul class="footer-blog-list">
+              <ul class="footer__blog-list">
                 <li><a href="#"><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Suspendisse consectetur neque quis</a></li>
                 <li><a href="#"><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Suspendisse consectetur neque quis</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="footer-col">
+          <div class="col-lg-3 col-sm-6">
+            <div class="footer__col">
               <h4><a href="#">Newslatter</a></h4>
               <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</p>
-              <form action="#" class="subscribe-form footer-form">
+              <form action="#" class="subscribe-form footer__form">
                 <input type="email" name="email">
                 <span class="subscribe-form__error">Value entered incorrectly</span>
                 <button type="submit" class="btn subscribe-form-btn">Submit</button>

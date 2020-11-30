@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	/* --- burger menu --- */
+
 	const navToggler = (btn, menu) => {
 		btn = $(`.${btn}`);
 		menu = $(`.${menu}`);
@@ -7,10 +9,25 @@ $(document).ready(function() {
 		btn.on('click', function() {
 			$(this).toggleClass('active');
 			menu.toggleClass('active');
+			$('body').toggleClass('body-overlay');
 		})
 	}
 
-	navToggler('header-nav-btn', 'header-nav-list'); 
+	navToggler('header-nav__btn', 'header-nav__list'); 
+
+	/* --- ancor navigation --- */
+
+	$(".header-nav__list a").on("click", function (event) {
+		$('body').removeClass('body-overlay');
+		$('.header-nav__btn').removeClass('active');
+		$('.header-nav__list').removeClass('active');
+	    event.preventDefault();
+	    var id  = $(this).attr('href'),
+	        top = $(id).offset().top;
+	    $('body,html').animate({scrollTop: top}, 1500);
+	  });
+
+	/* --- slider --- */
 
 	$('.about-slider').slick({
 		slidesToShow: 1,
@@ -21,25 +38,27 @@ $(document).ready(function() {
 		nextArrow: `<button type="button" class="slider-arr right-arr">Next</button>`
 	});
 
+	/* --- new posts  --- */
+
 	$('.more').on('click', function() {
 		$(this).addClass('isLoading');
 
 		setTimeout(() => {
 			$(this).removeClass('isLoading');
 			$.getJSON('js/data.json', function(data){
-		  	var container = $('.projects-row');
+		  	var container = $('.projects__row');
 		  	var items = [];
 
 		  	$(data).each((i, item) => {
 		  		items.push(` 
-		  			<article class="cart" id="${item.id}">
-        			<main class="cart-pic">
+		  			<article class="cart projects__cart" id="${item.id}" tabindex="-1">
+        			<div class="cart-pic">
                 <div class="cart-controlls">
                 	<a href="#" class="cart-view">Show more</a>
                 	<button class="cart-favourite">Add to favourite</button>
                 </div>
                 <img src="images/${item.pic}" alt="">
-              </main>
+              </div>
               <footer class="cart-desc">
                 <h4>${item.title}</h4>
                 <p><em>${item.label}</em></p>
@@ -54,6 +73,7 @@ $(document).ready(function() {
 		
 	}); 
 
+	/* --- validation --- */
 
 	let btn = $('.subscribe-form-btn');
 	$(".subscribe-form input[type='email']").keyup(function(){
@@ -84,7 +104,4 @@ $(document).ready(function() {
     var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
     return pattern.test(emailAddress);
 	}
-
-	
-
 })

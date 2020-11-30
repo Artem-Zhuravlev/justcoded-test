@@ -1,0 +1,103 @@
+@media(max-width: 992px) {
+	.about{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		&-sidebar{
+			margin-right: 0;
+			margin-bottom: 45px;
+		}
+		&-slider{
+			margin-left: 0;
+			h3{
+				max-width: calc(100% - 40px);
+			}
+		}
+	}
+
+	.projects{
+		padding-top: 60px;
+		padding-bottom: 50px;
+		&__row{
+			column-count: 2;
+		}
+		&__btn-section{
+			padding-top: 40px;
+		}
+	}
+
+	.footer{
+		&__col{
+			margin-bottom: 45px;
+			h4{
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@media(max-width: 767px) {
+	.header{
+		&-nav{
+			&__list{
+				padding-left: 15px;
+				padding-right: 15px;
+				font-size: 35px;
+			}
+		}
+	}
+	.banner{
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 0;
+		padding-bottom: 0;
+		&__title-section{
+			margin-bottom: 30px;
+		}
+		&__btns-section{
+			a{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.about{
+		&-sidebar{
+			padding: 30px 20px;
+		}
+	}
+
+	.footer{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+
+@media(max-width: 575px) {
+	.banner{
+		h2{
+			font-size: 25px;
+		}
+	}
+	.projects{
+		&__row{
+			column-count: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__cart{
+			max-width: 450px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.cart{
+		
+	}
+	h1, .h1{
+		font-size: 29px;
+	}
+
+}

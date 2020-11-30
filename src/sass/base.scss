@@ -10,6 +10,9 @@ body{
 	font-family: 'Poppins', sans-serif;
 	color: $mainColor;
 	letter-spacing: -.1px;
+	&.body-overlay {
+		overflow: hidden;
+	}
 }
 
 .main{

@@ -1,6 +1,4 @@
-.cart{
-    //width: calc((100% - 20px)/3);
-    margin-bottom: 26px;
+.cart{    
     box-shadow: 0 0 4px $grayBorder;
 	position: relative;
 	display: inline-block;
@@ -9,10 +7,7 @@
 	color: inherit;
 	transition: .3s;
 	overflow: hidden;
-	-webkit-column-break-inside: avoid;
-  	page-break-inside: avoid;
-	break-inside: avoid-column;
-	backface-visibility:hidden;
+	
 
 
 	&::before{
